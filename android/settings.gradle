@@ -1,0 +1,3 @@
+rootProject.name = 'boilerplateFirebase'
+
+include ':app'
