@@ -1,4 +1,13 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { Navigation } from 'react-native-navigation';
 
-AppRegistry.registerComponent('boilerplateFirebase', () => App);
+import { registerScreens } from './src/screens';
+
+registerScreens();
+
+Navigation.startSingleScreenApp({
+    screen: {
+        label: 'First',
+        screen: 'FirstScreen',
+        title: 'Fist Screen'
+    }
+});
