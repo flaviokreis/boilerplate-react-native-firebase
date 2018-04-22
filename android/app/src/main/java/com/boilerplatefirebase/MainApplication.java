@@ -9,6 +9,9 @@ import com.reactnativenavigation.NavigationApplication;
 import java.util.Arrays;
 import java.util.List;
 
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.auth.RNFirebaseAuthPackage;
+
 public class MainApplication extends NavigationApplication {
 
     private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -20,7 +23,9 @@ public class MainApplication extends NavigationApplication {
         @Override
         protected List<ReactPackage> getPackages() {
           return Arrays.<ReactPackage>asList(
-              new MainReactPackage()
+                new MainReactPackage(),
+                new RNFirebasePackage(),
+                new RNFirebaseAuthPackage()
           );
         }
 
@@ -51,7 +56,8 @@ public class MainApplication extends NavigationApplication {
         // Add additional packages you require here
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
-                // eg. new VectorIconsPackage()
+                new RNFirebasePackage(),
+                new RNFirebaseAuthPackage()
         );
     }
 
