@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import <React/RCTBundleURLProvider.h>
+#import <Firebase.h>
 
 #import "RCCManager.h"
 
@@ -16,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [FIRApp configure];
+  
   NSURL *jsCodeLocation;
 #ifdef DEBUG
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
